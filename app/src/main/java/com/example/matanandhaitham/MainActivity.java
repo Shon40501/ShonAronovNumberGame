@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private int ranint4;
     private int ranint5;
     private int ranint6;
+    private double correct = 0;
+    private double score;
 
 
     @Override
@@ -68,9 +71,6 @@ public class MainActivity extends AppCompatActivity {
         tv5.setText("" + ranint5);
         tv6.setText("" + ranint6);
 
-        input2 = (EditText) findViewById(R.id.Edit2);
-        String inst2 = input2.getText().toString();
-
 
     }
 
@@ -85,9 +85,10 @@ public class MainActivity extends AppCompatActivity {
         if (Integer.parseInt(inst1) == (ranint1+ranint4)) {
             c1.setVisibility(View.VISIBLE);
             Wrong1.setVisibility(View.INVISIBLE);
+            correct++;
         } else {
             c1.setVisibility(View.INVISIBLE);
-            Wrong1.setVisibility(View.VISIBLE); // Set to VISIBLE, not INVISIBLE
+            Wrong1.setVisibility(View.VISIBLE);
         }
     }
 
@@ -97,9 +98,10 @@ public class MainActivity extends AppCompatActivity {
         if (Integer.parseInt(inst2) == (ranint2 + ranint5)) {
             c2.setVisibility(View.VISIBLE);
             Wrong2.setVisibility(View.INVISIBLE);
+            correct++;
         } else {
             c2.setVisibility(View.INVISIBLE);
-            Wrong2.setVisibility(View.VISIBLE); // Set to VISIBLE, not INVISIBLE
+            Wrong2.setVisibility(View.VISIBLE);
         }
     }
 
@@ -109,10 +111,39 @@ public class MainActivity extends AppCompatActivity {
         if (Integer.parseInt(inst3) == (ranint3 + ranint6)) {
             c3.setVisibility(View.VISIBLE);
             Wrong3.setVisibility(View.INVISIBLE);
+            correct++;
         } else {
             c3.setVisibility(View.INVISIBLE);
-            Wrong3.setVisibility(View.VISIBLE); // Set to VISIBLE, not INVISIBLE
+            Wrong3.setVisibility(View.VISIBLE);
         }
     }
 
+    public void Next(View view) {
+        score = (correct/3)*100;
+        Wrong1.setVisibility(View.INVISIBLE);
+        Wrong2.setVisibility(View.INVISIBLE);
+        Wrong3.setVisibility(View.INVISIBLE);
+        c1.setVisibility(View.INVISIBLE);
+        c2.setVisibility(View.INVISIBLE);
+        c3.setVisibility(View.INVISIBLE);
+        ranint1 = get_rand();
+        ranint2 = get_rand();
+        ranint3 = get_rand();
+        ranint4 = get_rand();
+        ranint5 = get_rand();
+        ranint6 = get_rand();
+        tv1.setText("" + ranint1);
+        tv2.setText("" + ranint2);
+        tv3.setText("" + ranint3);
+        tv4.setText("" + ranint4);
+        tv5.setText("" + ranint5);
+        tv6.setText("" + ranint6);
+        Toast.makeText(MainActivity.this, (int)correct+"/3, " +(correct/3)*100 + "%", Toast.LENGTH_SHORT).show();
+        score=0;
+        correct=0;
+        input1.setText(null);
+        input2.setText(null);
+        input3.setText(null);
+        //
+    }
 }
