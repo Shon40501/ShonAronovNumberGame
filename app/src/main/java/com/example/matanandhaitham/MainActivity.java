@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv4;
     private TextView tv5;
     private TextView tv6;
+    private TextView Answer1;
+    private TextView Answer2;
+    private TextView Answer3;
     private ImageView c1;
     private ImageView c2;
     private ImageView c3;
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         tv4 = findViewById(R.id.tv4);
         tv5 = findViewById(R.id.tv5);
         tv6 = findViewById(R.id.tv6);
+        Answer1 = findViewById(R.id.Answer1);
+        Answer2 = findViewById(R.id.Answer2);
+        Answer3 = findViewById(R.id.Answer3);
         c1 = findViewById(R.id.correct1);
         c2 = findViewById(R.id.Correct2);
         c3 = findViewById(R.id.Correct3);
@@ -116,10 +122,14 @@ public class MainActivity extends AppCompatActivity {
             c3.setVisibility(View.INVISIBLE);
             Wrong3.setVisibility(View.VISIBLE);
         }
+        score = (correct/3)*100;
+        Toast.makeText(MainActivity.this, (int)correct+"/3, " +(correct/3)*100 + "%", Toast.LENGTH_SHORT).show();
     }
 
     public void Next(View view) {
-        score = (correct/3)*100;
+        Answer1.setText("Answer: " + (ranint1+ranint4));
+        Answer2.setText("Answer: " + (ranint2 + ranint5));
+        Answer3.setText("Answer: " + (ranint3 + ranint6));
         Wrong1.setVisibility(View.INVISIBLE);
         Wrong2.setVisibility(View.INVISIBLE);
         Wrong3.setVisibility(View.INVISIBLE);
@@ -138,12 +148,10 @@ public class MainActivity extends AppCompatActivity {
         tv4.setText("" + ranint4);
         tv5.setText("" + ranint5);
         tv6.setText("" + ranint6);
-        Toast.makeText(MainActivity.this, (int)correct+"/3, " +(correct/3)*100 + "%", Toast.LENGTH_SHORT).show();
         score=0;
         correct=0;
         input1.setText(null);
         input2.setText(null);
         input3.setText(null);
-        //
     }
 }
