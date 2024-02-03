@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private int ranint6;
     private double correct = 0;
     private double score;
+    private double sum = 0;
 
 
     @Override
@@ -65,19 +66,15 @@ public class MainActivity extends AppCompatActivity {
         Wrong2 = findViewById(R.id.Wrong2);
         Wrong3 = findViewById(R.id.Wrong3);
         ranint1 = get_rand();
-        ranint2 = get_rand();
-        ranint3 = get_rand();
         ranint4 = get_rand();
         ranint5 = get_rand();
-        ranint6 = get_rand();
         tv1.setText("" + ranint1);
-        tv2.setText("" + ranint2);
-        tv3.setText("" + ranint3);
         tv4.setText("" + ranint4);
-        tv5.setText("" + ranint5);
-        tv6.setText("" + ranint6);
-
-
+        ranint6 = get_rand();
+        tv2.setText("num");
+        tv3.setText("num");
+        tv5.setText("num");
+        tv6.setText("num");
     }
 
     public static int get_rand() {
@@ -96,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
             c1.setVisibility(View.INVISIBLE);
             Wrong1.setVisibility(View.VISIBLE);
         }
+        sum++;
+        ranint2 = (ranint1+ranint4);
+        tv5.setText("" + ranint5);
+        tv2.setText("" + ranint2);
     }
 
     public void b2(View view) {
@@ -109,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
             c2.setVisibility(View.INVISIBLE);
             Wrong2.setVisibility(View.VISIBLE);
         }
+        sum++;
+        ranint3 = (ranint2+ranint5);
+        tv6.setText("" + ranint6);
+        tv3.setText("" + ranint3);
     }
 
     public void b3(View view) {
@@ -122,34 +127,34 @@ public class MainActivity extends AppCompatActivity {
             c3.setVisibility(View.INVISIBLE);
             Wrong3.setVisibility(View.VISIBLE);
         }
+        sum++;
+        ranint1 = (ranint3+ranint6);
+        tv4.setText("" + ranint4);
+        tv1.setText("" + ranint1);
         score = (correct/3)*100;
-        Toast.makeText(MainActivity.this, (int)correct+"/3, " +(correct/3)*100 + "%", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, (int)correct+"/"+ sum + ", " +(correct/sum)*100 + "%", Toast.LENGTH_SHORT).show();
     }
 
     public void Next(View view) {
-        Answer1.setText("Answer: " + (ranint1+ranint4));
-        Answer2.setText("Answer: " + (ranint2 + ranint5));
-        Answer3.setText("Answer: " + (ranint3 + ranint6));
+        ranint1 = get_rand();
+        ranint4 = get_rand();
+        ranint5 = get_rand();
+        ranint6 = get_rand();
+        tv1.setText("" + ranint1);
+        tv4.setText("" + ranint4);
+        tv2.setText("num");
+        tv3.setText("num");
+        tv5.setText("num");
+        tv6.setText("num");
         Wrong1.setVisibility(View.INVISIBLE);
         Wrong2.setVisibility(View.INVISIBLE);
         Wrong3.setVisibility(View.INVISIBLE);
         c1.setVisibility(View.INVISIBLE);
         c2.setVisibility(View.INVISIBLE);
         c3.setVisibility(View.INVISIBLE);
-        ranint1 = get_rand();
-        ranint2 = get_rand();
-        ranint3 = get_rand();
-        ranint4 = get_rand();
-        ranint5 = get_rand();
-        ranint6 = get_rand();
-        tv1.setText("" + ranint1);
-        tv2.setText("" + ranint2);
-        tv3.setText("" + ranint3);
-        tv4.setText("" + ranint4);
-        tv5.setText("" + ranint5);
-        tv6.setText("" + ranint6);
         score=0;
         correct=0;
+        sum = 0;
         input1.setText(null);
         input2.setText(null);
         input3.setText(null);
