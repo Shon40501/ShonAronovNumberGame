@@ -210,14 +210,12 @@
         android:id="@+id/ButtonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
         android:onClick="Next"
         android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintEnd_toEndOf="@+id/Correct3"
+        app:layout_constraintStart_toStartOf="@+id/correct1"
+        app:layout_constraintTop_toBottomOf="@+id/Wrong2" />
 
     <TextView
         android:id="@+id/Answer1"
