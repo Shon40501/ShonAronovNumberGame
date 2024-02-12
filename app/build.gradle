@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.matanandhaitham'
+    namespace 'com.example.ShonNumberGame'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.matanandhaitham"
+        applicationId "com.example.ShonNumberGame"
         minSdk 24
         targetSdk 34
         versionCode 1

@@ -1,4 +1,4 @@
-package com.example.matanandhaitham;
+package com.example.ShonNumberGame;
 
 import org.junit.Test;
 

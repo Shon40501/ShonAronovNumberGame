@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "matan and haitham"
+rootProject.name = "ShonNumberGame"
 include ':app'

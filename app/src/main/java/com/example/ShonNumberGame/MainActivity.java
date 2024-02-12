@@ -1,4 +1,4 @@
-package com.example.matanandhaitham;
+package com.example.ShonNumberGame;
 
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
         score=0;
         correct=0;
         sum = 0;
+
         input1.setText(null);
         input2.setText(null);
         input3.setText(null);

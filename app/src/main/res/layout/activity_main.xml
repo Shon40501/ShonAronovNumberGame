@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.449"
-        app:srcCompat="@drawable/kahoot_correctr" />
+        app:srcCompat="@drawable/shoncorrect" />
 
     <ImageView
         android:id="@+id/Correct2"
@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.448"
-        app:srcCompat="@drawable/kahoot_correctr" />
+        app:srcCompat="@drawable/shoncorrect" />
 
     <ImageView
         android:id="@+id/Correct3"
@@ -57,7 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.447"
-        app:srcCompat="@drawable/kahoot_correctr" />
+        app:srcCompat="@drawable/shoncorrect" />
 
     <ImageView
         android:id="@+id/Wrong1"
@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/kahoot_wrong" />
+        app:srcCompat="@drawable/shonwrong" />
 
     <EditText
         android:id="@+id/Edit2"
@@ -113,7 +113,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/kahoot_wrong" />
+        app:srcCompat="@drawable/shonwrong" />
 
     <ImageView
         android:id="@+id/Wrong3"
@@ -126,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/kahoot_wrong" />
+        app:srcCompat="@drawable/shonwrong" />
 
     <Button
         android:id="@+id/Button1"
