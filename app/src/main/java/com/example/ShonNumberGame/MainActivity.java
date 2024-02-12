@@ -160,4 +160,4 @@ public class MainActivity extends AppCompatActivity {
         input2.setText(null);
         input3.setText(null);
     }
-}
+}//
