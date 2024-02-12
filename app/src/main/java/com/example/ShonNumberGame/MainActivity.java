@@ -79,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
 
     public static int get_rand() {
         Random rand = new Random();
-        return (int)Math.floor(Math.random() * (89) + 10);
+        return (int) Math.floor(Math.random() * (89) + 10);
     }
 
     public void b1(View view) {
         input1 = findViewById(R.id.Edit1);
         String inst1 = input1.getText().toString();
-        if (Integer.parseInt(inst1) == (ranint1+ranint4)) {
+        if (Integer.parseInt(inst1) == (ranint1 + ranint4)) {
             c1.setVisibility(View.VISIBLE);
             Wrong1.setVisibility(View.INVISIBLE);
             correct++;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             Wrong1.setVisibility(View.VISIBLE);
         }
         sum++;
-        ranint2 = (ranint1+ranint4);
+        ranint2 = (ranint1 + ranint4);
         tv5.setText("" + ranint5);
         tv2.setText("" + ranint2);
     }
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             Wrong2.setVisibility(View.VISIBLE);
         }
         sum++;
-        ranint3 = (ranint2+ranint5);
+        ranint3 = (ranint2 + ranint5);
         tv6.setText("" + ranint6);
         tv3.setText("" + ranint3);
     }
@@ -128,11 +128,11 @@ public class MainActivity extends AppCompatActivity {
             Wrong3.setVisibility(View.VISIBLE);
         }
         sum++;
-        ranint1 = (ranint3+ranint6);
+        ranint1 = (ranint3 + ranint6);
         tv4.setText("" + ranint4);
         tv1.setText("" + ranint1);
-        score = (correct/3)*100;
-        Toast.makeText(MainActivity.this, (int)correct+"/"+ sum + ", " +(correct/sum)*100 + "%", Toast.LENGTH_SHORT).show();
+        score = (correct / 3) * 100;
+        Toast.makeText(MainActivity.this, (int) correct + "/" + sum + ", " + (correct / sum) * 100 + "%", Toast.LENGTH_SHORT).show();
     }
 
     public void Next(View view) {
@@ -152,12 +152,12 @@ public class MainActivity extends AppCompatActivity {
         c1.setVisibility(View.INVISIBLE);
         c2.setVisibility(View.INVISIBLE);
         c3.setVisibility(View.INVISIBLE);
-        score=0;
-        correct=0;
+        score = 0;
+        correct = 0;
         sum = 0;
 
         input1.setText(null);
         input2.setText(null);
         input3.setText(null);
     }
-}//
+}
